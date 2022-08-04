@@ -9,7 +9,7 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
   // usa matchFunc para identificar elementos que matchien
 
   // TU CÓDIGO AQUÍ
-  
+  if (matchFunc === startEl) resultSet.push(startEl)
 };
 
 // Detecta y devuelve el tipo de selector
@@ -18,6 +18,12 @@ var traverseDomAndCollectElements = function(matchFunc, startEl) {
 
 var selectorTypeMatcher = function(selector) {
   // tu código aquí
+  let arraySelector= selector.split(".")
+  if (selector[0]==="#") return "id"
+  else if (selector[0]===".") return "class"
+  else if (arraySelector.length >1) return "tag.class"
+  else  return "tag"
+ 
   
 };
 
