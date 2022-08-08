@@ -5,22 +5,19 @@ import SearchBar from './components/SearchBar.jsx';
 import data from './data.js';
 
 function App() {
-  return (
-    <div className="App">
-      <div>
-        <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
-        />
-      </div> 
-      <div className='pepe'>
-        <Cards
-          cities={data}
-        />
-      </div>
-      <hr />
-     
-    </div>
-  );
+return (
+<div className="App">
+  <div>
+    <SearchBar onSearch={(ciudad)=> alert(ciudad)}
+      />
+  </div>
+  <div className='pepe'>
+    <Cards cities={data} />
+  </div>
+  <hr />
+
+</div>
+);
 }
 
 export default App;

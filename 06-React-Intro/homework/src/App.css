@@ -43,7 +43,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 20px 40px 20px 50px;
-  margin-bottom: 10px;
+  margin: 0 10px;
+  float: left;
 }
 
 .card-title {
@@ -94,10 +95,8 @@
 
 .pepe {
   width: 100%;
-  display: inline-block;
+ display: flex;
+ justify-content: space-around;
+ 
 
-  align-self: center;
-  justify-content: center;
-  text-align: justify;
-  
 }
