@@ -32,7 +32,72 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px 40px 20px 50px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  grid-column-start: 3;
+
+  grid-row-start: 2;
+
+}
+
+.card-min {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.card-max {
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+
+.img-card {
+  grid-column-start: 5;
+  grid-row-start: 3;
+
+}
+
+.card-img {
+  width: 70px;
+  height: 70px;
+
+}
+
+.bt-red {
+  background-color: rgba(255, 30, 0, 0.815);
+  border-radius: 15%;
+  border-color: rgba(255, 30, 0, 0.815);
+  color: white;
+
+  ;
+
+}
+
+.bt-position {
+  margin-right: 1px;
+  grid-column-start: 6;
+  grid-row-start: 1;
+
+}
+
+.pepe {
+  width: 100%;
+  display: inline-block;
+
+  align-self: center;
+  justify-content: center;
+  text-align: justify;
+  
 }
