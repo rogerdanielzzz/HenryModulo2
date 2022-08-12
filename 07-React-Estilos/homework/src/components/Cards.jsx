@@ -1,44 +1,27 @@
 import React from "react";
 import Card from "./Card";
+import Style from "./styles/Cards.module.css";
 
-export default function Cards({ cities }) {
-  // acá va tu código
-  // tip, podés usar un map
-
-  // if (!cities) {
-  //   return (
-  //     <div>
-  //       <h1>No se recibieron ciudades</h1>
-  //     </div>
-  //   );
-  // }
-
+export default function Cards({ cities, onClose }) {
   return (
-    <div>
-      { cities && cities.length > 0 ? (
-        cities.map((ciudad, index) => {
-        
+    <div className={Style.allCards}>
+      {cities && cities.length > 0 ? (
+        cities.map((ciudad) => {
+
           return (
             <Card
-              key={index}
-              max={ciudad.main.temp_max}
-              min={ciudad.main.temp_min}
+              key={ciudad.id}
+              max={ciudad.max}
+              min={ciudad.min}
               name={ciudad.name}
-              img={ciudad.weather[0].icon}
-              onClose={() => alert(ciudad.name)}
+              img={ciudad.img}
+              onClose={() => onClose(ciudad.id)}
             />
           );
-          // main --> temp_max
-          // img --> weather 0 icon
         })
       ) : (
-        <h1>No hay ciudades para mostrar</h1>
+        <h1 className={Style.CardsVacio}>No hay ciudades para mostrar</h1>
       )}
     </div>
   );
 }
-
-// OPERADOR TERNARIO ---> CONDICION ? SI ES TRUE HACE ESTO : SI ES FALSE HACE ESTO OTRO
-// si es true          y si no:
-
-//   cities.length > 0 ? cities.map() : <h1>

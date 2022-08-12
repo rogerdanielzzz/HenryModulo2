@@ -1,0 +1,27 @@
+.allCards {
+  /*display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;*/
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.CardsVacio {
+  font-size: 9vh;
+  padding: 15%;
+
+}
+
+@media only screen and (max-width: 576px) {
+  .CardsVacio {
+    font-size: 9vh;
+    padding: 0%;
+    text-align: center;
+
+
+  }
+
+}

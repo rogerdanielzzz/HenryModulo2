@@ -1,0 +1,17 @@
+body {
+  color: white;
+  background: url(../../components/img/gradienta-m_7p45JfXQo-unsplash.jpg);
+  background-size: cover;
+
+
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+
+    background: url(../../components/img/bg-mobile.jpg);
+    background-size: cover;
+
+
+  }
+}
