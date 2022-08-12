@@ -6,7 +6,7 @@ import NavBar from './components/NavBar.jsx';
 function App() {
 
   const [ciudades, setCiudades] = useState([])
-  const apiKey = "b9a5a4461ddd137d64ba20dd44c2a17e"
+  const apiKey = "Secret"
   function onSearch(ciudad) {
 
     fetch(
